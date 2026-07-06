@@ -1,0 +1,119 @@
+/* Thiết lập nền tối và phông chữ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0b0f19; /* Nền màu xanh đen huyền bí */
+    color: #ffffff; /* Chữ màu trắng sáng để dễ đọc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Hiệu ứng chữ phát sáng (Glow) cho tiêu đề */
+.glow-text {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff, 0 0 40px #00f3ff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #a0aec0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* Khung viền kính mờ cho các thẻ tài liệu */
+.subject-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+/* Hiệu ứng di chuột cho thẻ Toán (phát sáng hồng/đỏ) */
+.math-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 0, 128, 0.4);
+    border-color: #ff0080;
+}
+
+/* Hiệu ứng di chuột cho thẻ Lý (phát sáng xanh dương) */
+.physics-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.4);
+    border-color: #00f3ff;
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.subject-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.subject-card p {
+    color: #e2e8f0; /* Chữ màu xám sáng giúp tăng độ nét */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.card-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Nút bấm mặc định */
+.btn-neon {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Nút bấm thẻ Toán khi di chuột */
+.math-card .btn-neon:hover {
+    background: #ff0080;
+    border-color: #ff0080;
+    box-shadow: 0 0 15px #ff0080;
+}
+
+/* Nút bấm thẻ Lý khi di chuột */
+.physics-card .btn-neon:hover {
+    background: #00f3ff;
+    border-color: #00f3ff;
+    box-shadow: 0 0 15px #00f3ff;
+}
